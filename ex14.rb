@@ -1,7 +1,7 @@
 user_name = ARGV.first # gets the first name
 prompt = '> '	
 
-puts "hi #{user_name}."
+puts "hi #{user_name}.I'm the #{$0} script"
 puts "I'd like to ask you a few questions."
 puts "do you like me #{user_name}?"
 puts prompt
