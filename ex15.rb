@@ -1,8 +1,8 @@
-filename = ARGV.first
+filename = ARGV.first # filename is variable
 
-txt = open(filename)
+txt = open(filename) #open is a funtion in ruby, opens file
 
-puts "here's your file #{filename}"
+puts "here's your file #{filename}" 
 print txt.read
 
 print "type file name again: "
