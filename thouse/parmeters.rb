@@ -42,3 +42,9 @@ puts subtractagain(subtract(3,1), 1)#method being passed as a parameter
 # A method's return value is the value it returns to the code that called it.
 #The "puts" method may print a string to a terminal, but it RETURNS "nil", an empty value!
 print "this is the multiple perameters"
+
+
+#your methods aren't supposed to take any parameters, just return constant values.
+def four
+  4
+end
