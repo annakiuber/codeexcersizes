@@ -70,3 +70,9 @@ whole_number = 12
 fractional_number = 15.675
 p whole_number.class
 p fractional_number.class
+
+number = 75
+if number > 50
+  puts "number > 50"
+end
+if number 
