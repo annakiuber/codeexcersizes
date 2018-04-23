@@ -20,3 +20,4 @@ grocery_list.unshift("milk")
 
 first_three_items = gracery_list.slice(0,3)#doesn't alter original array
 =begin first space in parmiter is the index, then number of items
+=end
