@@ -82,3 +82,56 @@ if grocery_item.has_value?("Bread")
   grocery_item.store("food",true)
 end
 grocery_list = grocery_item.values_at("item")
+##############################################################################
+hash_methonds.rb
+hash = { "item" => "Bread", "quantity" => 1, "brand" => "Treehouse Bread Company" }
+
+puts "Hash: #{hash.inspect}"
+
+puts hash.length #returns number of key/value pairs
+print "hash.invert:"
+puts hash.invert
+=begin
+The #length method will return the number of keys in the hash. In this case, it would be 3:
+=end
+
+hash.length
+=begin The #invert method returns a new hash with the keys and values transposed:
+The #invert method returns a new hash with the keys and values transposed:
+{"Bread" => "item", 1 => "quantity", "Treehouse Bread Company" => "brand"}
+=end
+
+
+hash.invert
+
+=begin
+The #shift method works similar to hashes as it does with arrays. It will remove a key and value pair from the hash and return it as an array:
+
+hash.shift
+This would return the following (note that it is an array):
+
+["item", "Bread"]
+The original hash would also be modified:
+
+{"quantity" => 1, "brand" => "Treehouse Bread Company"}
+=end
+
+
+print "hash.shift:"
+puts hash.shift
+print "hash: "
+puts hash.inspect
+####################################################################
+Create a method named "create_shopping_list" that returns a hash. It does not need to ask for a name or get anything from standard input.
+def create_shopping_list
+  {}
+end
+
+
+Let's add an item to our grocery list. We've set up a grocery_list hash that has an 'items' key with an empty array as its value. We've also created another hash and stored it in the grocery_item variable.
+
+Append the grocery_item hash to the empty array that's under the grocery_list hash's 'items' key.
+
+grocery_list = { 'title' => 'Grocery List', 'items' => [] }
+grocery_item = { 'title' => 'Bread', 'quantity' => 1 }
+grocery_list['items'].push(grocery_item)
