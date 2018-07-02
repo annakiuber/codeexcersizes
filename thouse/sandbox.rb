@@ -1,23 +1,37 @@
 class Name
-  def title
-    "Mr."
+  attr_reader :first_name, :middle_name, :last_name
+  attr_accessor :title
+
+  def initialize(title, first_name, middle_name, last_name)
+    @title = title
+    @first_name = first_name
+    @middle_name = middle_name
+    @last_name = last_name
   end
 
-  def first_name
-    "Jason"
+  def full_name
+    @first_name + "" + @middle_name + "" + @last_name
+  end
+  def full_name_with_title
+    @title + "" + full_name
   end
 
-  def middle_name
-    ""
-  end
 
-  def last_name
-    "seifer"
-  end
+
+
+
+
+
 end
 
-name = Name.new
-puts name.title
-puts name.first_name
-puts name.middle_name
-puts name.last_name
+name = Name.new("ms.", "Anna", "Katherine", "kiuber")
+puts name.full_name_with_title
+puts name.title + " " +
+     name.first_name + " " +
+     name.middle_name + " " +
+     name.last_name
+
+puts "Title: #{name.title}"
+name.title = "Dr."
+puts "Title: #{name.title}"
+puts name.full_name_with_title
